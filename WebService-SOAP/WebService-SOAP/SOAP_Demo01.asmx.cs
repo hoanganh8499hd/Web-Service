@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using WebService_SOAP.Models;
 
 namespace WebService_SOAP
 {
@@ -67,6 +69,31 @@ namespace WebService_SOAP
             //return 0;
         }
 
-        
+        [WebMethod]
+        public Category GetCategory(int id)
+        {
+            SqlDataReader reader = null;
+            SqlConnection myConnection = new SqlConnection();
+            myConnection.ConnectionString = @"Data Source=HUYNHANH\SQLEXPRESS;Initial Catalog=DemoWebService;Integrated Security=True;";
+
+            SqlCommand command = new SqlCommand();
+            command.CommandTimeout = 15;
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from Category where CategoryID=" + id.ToString();
+            command.Connection = myConnection;
+            myConnection.Open();
+            reader = command.ExecuteReader();
+
+            Category category = null;
+            while (reader.Read())
+            {
+                category = new Category();
+                category.CategoryID = Convert.ToInt32(reader.GetValue(0));
+                category.CategoryName = reader.GetValue(1).ToString();
+            }
+            myConnection.Close();
+            return category;
+        }
+
     }
 }
