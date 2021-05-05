@@ -59,13 +59,14 @@ namespace WebService_SOAP
                 cnn.Close();
                 return count;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
+                return 0;
                 throw;
             }
-
-           return 0;
+            //return 0;
         }
+
+        
     }
 }
