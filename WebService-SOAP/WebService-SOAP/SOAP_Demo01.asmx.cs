@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
@@ -21,6 +22,50 @@ namespace WebService_SOAP
         public string HelloWorld()
         {
             return "Hello World";
+        }
+
+        [WebMethod]
+        public int TongHaiSo(int a, int b)
+        {
+            return a + b;
+        }
+        [WebMethod]
+        public string YourName(string name)
+        {
+            return name;
+        }
+
+        /// <summary>
+        /// So Luong San Pham Theo Ma Danh Muc
+        /// </summary>
+        /// <param name="CategoryID"></param>
+        /// <returns></returns>
+        [WebMethod]
+        public int GetNumberOfProductsByCategoryID(int CategoryID)
+        {
+            string connectionString = null;
+            SqlConnection cnn;
+            SqlCommand cmd;
+            string sql = null;
+            connectionString = @"Data Source=HUYNHANH\SQLEXPRESS;Initial Catalog=DemoWebService;Integrated Security=True";
+            sql = "select count(*) from Product where CategoryID=" + CategoryID.ToString();
+            cnn = new SqlConnection(connectionString);
+            try
+            {
+                cnn.Open();
+                cmd = new SqlCommand(sql, cnn);
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                cmd.Dispose();
+                cnn.Close();
+                return count;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+           return 0;
         }
     }
 }
