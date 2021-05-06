@@ -28,5 +28,13 @@ namespace Demo03
             //}
             return listCategory;
         }
+
+        [WebMethod]
+        public List<Product> GetListProductsByCategoryID(int id)
+        {
+            DemoWebServiceEntities demoWebServiceEntities = new DemoWebServiceEntities();
+            List<Product> listProducts = demoWebServiceEntities.Products.Where(x => x.CategoryID == id).ToList();
+            return listProducts;
+        }
     }
 }
