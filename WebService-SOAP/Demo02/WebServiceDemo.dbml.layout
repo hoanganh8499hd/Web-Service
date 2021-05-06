@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="WebServiceDemo">
+  <DataContextMoniker Name="/WebServiceDemoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c8c78bca-da60-4d14-a819-6fcfed6cdfd5" absoluteBounds="0.75, 1.125, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/WebServiceDemoDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05b57b46-0401-48ae-be97-8c9f15038216" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="341ef1f3-a734-4bfc-bfee-5d21f3148119" absoluteBounds="3.5, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/WebServiceDemoDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8034aaf4-a23e-489c-b0eb-ad924e4619f6" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.72199625651042); (3.5 : 1.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/WebServiceDemoDataContext/Category/Category_Product" />
+      <nodes>
+        <classShapeMoniker Id="c8c78bca-da60-4d14-a819-6fcfed6cdfd5" />
+        <classShapeMoniker Id="341ef1f3-a734-4bfc-bfee-5d21f3148119" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

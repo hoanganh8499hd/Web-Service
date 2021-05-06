@@ -52,7 +52,6 @@ E:\Test\Web_Service\GIT\WebService-SOAP\WebService-SOAP\bin\roslyn\VBCSCompiler.
 E:\Test\Web_Service\GIT\WebService-SOAP\WebService-SOAP\bin\roslyn\VBCSCompiler.exe.config
 E:\Test\Web_Service\GIT\WebService-SOAP\WebService-SOAP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\Test\Web_Service\GIT\WebService-SOAP\WebService-SOAP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Test\Web_Service\GIT\WebService-SOAP\WebService-SOAP\obj\Debug\WebService-SOAP.csprojAssemblyReference.cache
 E:\Test\Web_Service\GIT\WebService-SOAP\WebService-SOAP\obj\Debug\WebService-SOAP.csproj.CoreCompileInputs.cache
 E:\Test\Web_Service\GIT\WebService-SOAP\WebService-SOAP\obj\Debug\WebService-SOAP.csproj.CopyComplete
 E:\Test\Web_Service\GIT\WebService-SOAP\WebService-SOAP\obj\Debug\WebService-SOAP.dll
