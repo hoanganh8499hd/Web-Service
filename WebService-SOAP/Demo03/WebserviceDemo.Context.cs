@@ -18,7 +18,7 @@ namespace Demo03
         public DemoWebServiceEntities()
             : base("name=DemoWebServiceEntities")
         {
-            //https://stackoverflow.com/questions/18150301/error-generating-xml-document-the-type-job-was-not-//expected
+            //https://stackoverflow.com/questions/18150301/error-generating-xml-document-the-type-job-was-not-expected
             this.Configuration.ProxyCreationEnabled = false;
         }
     
